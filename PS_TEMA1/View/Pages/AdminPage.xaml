@@ -1,0 +1,151 @@
+﻿<Page x:Class="PS_TEMA1.View.Pages.AdminPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PS_TEMA1.View.Pages" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminPage">
+    <Page.Background>
+        <!-- Create a LinearGradientBrush with your colors -->
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#49c5b6" Offset="0"/>
+            <GradientStop Color="#2779a7" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Background>
+    <Page.Resources>
+        <!-- DataGrid Base Style -->
+        <Style x:Key="DataGridBaseStyle" TargetType="DataGrid">
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#2779a7"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="RowBackground" Value="#49c5b6"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <!-- Column Header Style -->
+        <Style x:Key="DataGridColumnHeaderStyle" TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#2779a7"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+    </Page.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid HorizontalAlignment="Center">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Form -->
+            <Expander Header="Administrare Utilizatori" IsExpanded="True" Margin="10" Grid.Row="0" Background="#49c5b6" Padding="0,0,100,0"
+                      x:Name="Administrare">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- ID - Hidden -->
+                    <TextBox x:Name="IdTextBox" Margin="0,5,10,5" Grid.Column="1" Grid.Row="0" Visibility="Hidden"/>
+
+                    <!-- Name -->
+                    <Label Content="Name:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="NumeTextBox" Margin="0,5,10,5" Grid.Column="1" Grid.Row="1"/>
+
+                    <!-- Email -->
+                    <Label Content="Email:" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="EmailTextBox" Margin="0,5,10,5" Grid.Column="1" Grid.Row="2"/>
+
+                    <!-- Password -->
+                    <Label Content="Password:" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="ParolaTextBox" Margin="0,5,10,5" Grid.Column="1" Grid.Row="3"/>
+
+                    <!-- User Type -->
+                    <Label Content="User Type:" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="UserTypeComboBox" Margin="0,5,10,5" Grid.Column="1" Grid.Row="4"/>
+
+                    <!-- Telephone -->
+                    <Label Content="Telephone:" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBox x:Name="TelefonTextBox" Margin="0,5,10,5" Grid.Column="1" Grid.Row="5"/>
+
+                    <!-- Buttons -->
+                    <Button x:Name="CreateUserButton" Content="Create User" Margin="0,5,10,5" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Width="100" Click="CreateUserButton_Click"/>
+                    <Button x:Name="UpdateUserButton" Content="Update User" Margin="0,5,10,5" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Width="100" Click="UpdateButton_Click"/>
+                    <Button x:Name="UpdateUserButton_Copy" Content="Back" Margin="229,-2,0,12" Grid.Column="1" HorizontalAlignment="Right" Width="100" Click="BackButton_Click"/>
+                </Grid>
+
+
+
+            </Expander>
+
+
+
+            <!-- DataGrid -->
+            <DataGrid Grid.Row="2" x:Name="TabelUtilizatori" Style="{StaticResource DataGridBaseStyle}">
+                <DataGrid.ColumnHeaderStyle>
+                    <StaticResource ResourceKey="DataGridColumnHeaderStyle"/>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="*"/>
+                    <DataGridTextColumn Header="Nume" Binding="{Binding Nume}" Width="*"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                    <DataGridTextColumn Header="UserType" Binding="{Binding UserType}" Width="*"/>
+                    <DataGridTextColumn Header="Telefon" Binding="{Binding Telefon}" Width="*"/>
+                    <DataGridTextColumn Header="Password" Binding="{Binding Parola}" Width="*"/>
+                    <DataGridTemplateColumn Header="Delete">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Background="#2779a7" Click="DeleteButton_Click">
+                                    <materialDesign:PackIcon Kind="Delete" VerticalAlignment="Center" Foreground="White"/>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Update">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Background="#2779a7" Click="SelectButton_Click">
+                                    <materialDesign:PackIcon Kind="CursorPointer" VerticalAlignment="Center" Foreground="White"/>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Grid.Row="1" 
+                Text="Utilizatori" 
+                FontSize="20" 
+                FontWeight="Bold" 
+                Margin="0,15,0,0" 
+                Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <!--<Button x:Name="UpdateUserButton_Copy1" Content="Back" Margin="561,0,-134,82" Click="BackButton_Click" HorizontalAlignment="Center" Width="40"/>-->
+        </Grid>
+    </ScrollViewer>
+</Page>

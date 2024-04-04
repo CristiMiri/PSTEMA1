@@ -1,0 +1,29 @@
+﻿<Window x:Class="PS_TEMA1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PS_TEMA1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <!-- Two Rows in the Grid -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- First Row: Header -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" x:Name="Header" Background="{DynamicResource AppBackgroundBrush}">
+            <!-- Banner -->
+            <TextBlock Text="Conference Application" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Margin="10" Style="{DynamicResource HeaderTextBlockStyle}"/>
+            <!-- Login Button --><!--c:\users\crist\documents\facultate\anul4_sem2\ps\ps_tema1\mainwindow.xaml.cs
+c:\users\crist\documents\facultate\anul4_sem2\ps\ps_tema1\mainwindow.xaml-->
+
+            <Button x:Name="loginButton" Content="Login" Margin="450,10,10,10" Click="Login_Click" HorizontalAlignment="Right" Style="{DynamicResource ButtonBaseStyle}"/>
+        </StackPanel>
+
+        <!-- Second Row: Main Content -->
+        <Frame Content="Main" Grid.Row="1" Name="mainFrame" Margin="0,2,0,-2" Navigated="main_Navigated"/>
+    </Grid>
+</Window>

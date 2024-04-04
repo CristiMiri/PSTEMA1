@@ -1,0 +1,117 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="PS_TEMA1_TEST" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="PS_TEMA1_TEST" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="CreateDataBaseTablesTest" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.CreateDataBaseTablesTest.CreateTableConferinteTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateTableConferinteTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.CreateDataBaseTablesTest.CreateTableParticipantiTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateTableParticipantiTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.CreateDataBaseTablesTest.CreateTablePrezentariTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateTablePrezentariTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.CreateDataBaseTablesTest.CreateTableUtilizatorTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CreateTableUtilizatorTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.CreateDataBaseTablesTest.DropTableUtilizatorTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DropTableUtilizatorTest" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="RepositoryTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.RepositoryTests.CloseConnectionTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="CloseConnectionTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.RepositoryTests.ExecuteNonQueryTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExecuteNonQueryTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.RepositoryTests.ExecuteQueryTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="ExecuteQueryTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.RepositoryTests.OpenConnectionTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="OpenConnectionTest" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="Tests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.Tests.Test1" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Test1" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+                <Rule Match="All">
+                  <Property Name="Class" Value="UtilizatoriRepositoryTest" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.UtilizatoriRepositoryTest.AddUtilizatorTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="AddUtilizatorTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.UtilizatoriRepositoryTest.DeleteUtilizatorTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="DeleteUtilizatorTest" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="PS_TEMA1_TEST.UtilizatoriRepositoryTest.UpdateUtilizatorTest" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="UpdateUtilizatorTest" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
